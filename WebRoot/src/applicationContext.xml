@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- 配置action===============start -->
+	<!-- scope="prototype":配置Action为多例的 -->
+	<bean id="loginAction" class="com.aib.web.action.LoginAction"
+		scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+
+
+	<bean id="registerAction" class="com.aib.web.action.RegisterAction"
+		scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+
+
+	<bean id="goodsAction" class="com.aib.web.action.GoodsAction"
+		scope="prototype">
+		<property name="goodsService" ref="goodsService"></property>
+	</bean>
+
+
+	<bean id="myselfAction" class="com.aib.web.action.MyselfAction"
+		scope="prototype">
+	</bean>
+
+
+	<bean id="changePwdAction" class="com.aib.web.action.ChangePwdAction"
+		scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+
+	<bean id="changeInfoAction" class="com.aib.web.action.ChangeInfoAction"
+		scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+
+	<bean id="insertAction" class="com.aib.web.action.InsertAction"
+		scope="prototype">
+		<property name="goodsService" ref="goodsService"></property>
+	</bean>
+
+
+
+
+	<!-- 配置action===============end -->
+
+	<!-- 配置Service -->
+	<bean id="userService" class="com.aib.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	<bean id="goodsService" class="com.aib.service.impl.GoodsServiceImpl">
+		<property name="goodsDao" ref="goodsDao"></property>
+	</bean>
+
+	<!-- 配置Dao -->
+	<bean id="userDao" class="com.aib.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="goodsDao" class="com.aib.dao.impl.GoodsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+	<!-- Spring整合Hibernate -->
+	<!-- 引入Hibernate的配置的信息=============== -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<!-- 引入hibernate的配置文件 -->
+		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+	</bean>
+
+
+
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 开启注解事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+</beans>

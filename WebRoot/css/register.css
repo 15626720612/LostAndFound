@@ -1,0 +1,41 @@
+* input{
+	background: rgba(255,255,255,0.2);
+	border-left-width:0px;
+	border-top-width:0px;
+	border-right-width:0px;
+	border-bottom-color:#000;
+}
+.content{
+	float: left;
+	width: 100%;
+	position: relative;
+	padding:20px 100px;
+	background: #fff;
+}
+.register_head{
+	display: flex;
+	font-size: 25px;
+	position: relative;
+}
+.register_head img{
+	width: 100px;height: 40px;
+}
+
+#register_body{
+	display: flex;
+}
+#labs{
+	color: #FFD700;
+}
+.form-input img{
+	width: 30px;
+	height: 30px;
+	background-size:contain;
+	margin-top: 20px;
+}
+.form-input input{
+	font-size: 17px;
+	width: 300px;
+	height: 30px;
+	margin-top: 20px;
+}

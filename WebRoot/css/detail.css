@@ -1,0 +1,42 @@
+table.tb {
+	width: 65%;
+	margin: 20px auto;
+	font-size: 15px;
+}
+td.b_td{
+	font-size: 15px;
+	float: right;
+	padding-right: 20px;
+	padding-top: 5px;
+}
+input {
+	height:30px;
+	width:350px;
+	margin-top: 0px;
+	font-size: 15px;
+	
+}
+ table span {
+	color: #b7b3b3;
+	font-size: 15px;
+	line-height: 30px;
+}
+table button {
+	width: 300px;
+	height: 40px;
+	border-width:0px;
+	outline:none;
+	border-radius:10px;
+	background: #1e90ff;
+	cursor: pointer;
+	color: #fff;
+	font-size: 15px;
+}
+table button:hover{
+background: #5ea3e6;
+color: #d6d8da;
+}
+#register_body{
+	padding-left: 21px;
+}
+

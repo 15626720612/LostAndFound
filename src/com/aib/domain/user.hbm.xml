@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.aib.domain.User" table="tb_user">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="username" column="username" type="string" />
+		<property name="password" column="password" type="string" />
+		<property name="phone" column="phone" type="string" />
+		<property name="uname" column="uname" type="string" />
+		<property name="sex" column="sex" type="string" />
+		<property name="id_number" column="id_number" type="string" />
+		<property name="address" column="address" type="string" />
+		<property name="code_address" column="code_address" type="string" />
+		<property name="password_prompt" column="password_prompt"
+			type="string" />
+		<property name="prompt_answer" column="prompt_answer" type="string" />
+	</class>
+</hibernate-mapping>

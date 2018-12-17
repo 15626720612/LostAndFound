@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.aib.domain.Goods" table="tb_goods">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="username" column="username" type="string" />
+		<property name="phone" column="phone" type="string" />
+		<property name="goodsname" column="goodsname" type="string" />
+		<property name="lostdata" column="lostdata" type="string" />
+		<property name="type" column="type" type="string" />
+		<property name="data" column="data" type="string" />
+		<property name="descriptions" column="descriptions" type="string" />
+		<property name="category" column="category" type="string" />
+		<property name="address" column="address" type="string" />
+		<property name="imgUrl" column="imgUrl" type="string" />
+
+	</class>
+</hibernate-mapping>

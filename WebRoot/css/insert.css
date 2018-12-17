@@ -1,0 +1,32 @@
+/*发布页面的样式*/
+.warpper{ width: 100%;min-height: 700px;}
+.warpper form{padding: 20px;display: flex;width: 100%;background: #FFF; min-height: 600px;}
+.warpper form span{font-size: 15px;}
+.warpper form div{padding-top:20px; }
+.warpper form div :first-child{padding-top:0px; }
+.warpper form div img{width: 35px;}
+.warpper form input {
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-bottom: 1px solid #999;
+    height: 28px;
+    line-height: 28px;
+    width: 200px;
+    outline: none;
+}
+.warpper form .left{width: 70%}
+.warpper form .left textarea{width: 100%;height: 100px;}
+.warpper form .left div{display: flex;align-items: flex-start;}
+.warpper form  .form-img{float: right;}
+.warpper form .btn{ position: absolute;margin-left: 25%;margin-top: 530px;}
+.warpper form .btn input{ background: #1296db;border-radius: 5px #FFF solid;color: #fff; height: 40px;}
+.icon{
+    width: 40px;
+    padding-top: 6px !important;
+    height: 30px;
+    display: block !important;
+}
+.fa{
+    color: #87f0c0;
+}

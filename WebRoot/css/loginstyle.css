@@ -1,0 +1,48 @@
+*{-webkit-transition:all 0.5s linear;font-family: Microsoft YaHei;}
+div,img,input,h2,table,tr,td,select,i,option,button,a,dl,dd,ul,li,b{margin:0;padding:0;font-style:normal;font: 12px/1.6 tahoma,arial,sans-serif;color:#333;box-sizing: border-box;font-family: Microsoft YaHei;}
+ul{list-style: none;}
+a{text-decoration: none;}
+.wrap{width:400px;margin:auto auto;overflow:auto;/*margin嵌套问题*/}
+.wrap:before{/*margin嵌套问题*/content:'';display:table;}
+.logo{width:100%;height:52px;margin-top:30px;}
+.logo a{width:220px;height:100%;text-decoration: none;display:inline-block;}
+.logo a img{display:block;}
+.register-wrap{width:100%;padding:40px 0;margin: auto auto;}
+.register-wrap:after{/*内容没有撑开盒子的处理方法*/content:'';display:block;clear:both;}
+.register-wrap .pic{width:40%;padding: 20px 0 0 40px;float:left;display:inline-block;}
+.register-wrap .register{width:400px;display:inline-block;border:1px solid #ccc;margin: auto auto;}
+.register-wrap .register .register-top{border-bottom: 1px solid #ccc;box-sizing: content-box;padding: 8px 0 0 0;display:block;/*点击切换到扫码登录时隐藏*/}
+.register-top:after{/*内容没有撑开盒子的处理方法*/content:'';display:block;clear:both;}
+.register-wrap .register .register-top h2{font-size: 14px;color: #333;height: 42px;line-height: 42px;font-weight:800;letter-spacing: 1px;float:left;cursor: pointer;width:119px;text-align: center;position:relative;}
+.register-wrap .register .register-top h2.normal{border-bottom: 2px solid #f55;margin-left:140px;top:4px;}
+.register-wrap .register .register-top a{display:inline-block;float:right;width:46px;height:46px;margin-right:8px;}
+/*=======普通登录样式===========*/.register-wrap .register .register-con{padding: 0 0 30px 38px;display:block;/*切换到其他登录方式时，隐藏*/}
+.register-wrap .register .register-con:after{/*内容没有撑开盒子的处理方法*/content:'';display:block;clear:both;}
+.register-wrap .register .register-con ul{margin-top:20px;}
+.register-wrap .register .register-con ul li{margin-bottom:10px;vertical-align: top;/* border:1px solid #ccc;*/}
+.register-con ul #rc-inner-num,#rc-inner-virity{width:300px;height:32px;padding:0 6px;color:#ff1877;border:1px solid #ffd797;display:none;}
+.register-con ul #rc-inner-num>i,#rc-inner-virity>i,#rc-innerError>i{display:inline-block;float:left;width:20px;height:20px;margin:6px 10px;border:none;}
+.register-con ul #rc-inner-num>span,#rc-inner-virity>span,#rc-innerError>span{color:#ff184b;display:inline-block;float:left;line-height:26px;}
+.register-wrap .register .register-con ul li input{width:300px;height: 30px;line-height:30px;padding: 0 6px;font-size:100%;display:inline-block;vertical-align: top;}
+/*清除IE10中的text和password的默认图标*/::-ms-clear{display:none;}
+::-ms-reveal{display:none;}
+/* .register-wrap .register .register-con ul li i{display:inline-block;width:104px;height:30px;text-align: center;line-height:30px;margin-right:10px;font-size:14px;border:1px solid #ccc;background:url("../images/error.png") no-repeat;vertical-align: top;} */
+.register-wrap .register .register-con ul li .btn{width:104px;margin-left:10px;height: 30px;padding: 0 6px;font-size:100%;border-radius: 0;/* display:inline-block;*/border:1px solid #ccc;vertical-align: top;}
+.register-wrap .register .register-con ul li button{display: inline;border: none;width: 300px;height: 30px;padding: 0 6px;background: #1874ff;border-radius: 2px;cursor: pointer;color: #fff;}
+.register-wrap .register .register-con ul li.read{padding-bottom:20px;}
+.register-wrap .register .register-con ul li.read input{width:14px;height:14px;/*IE8-11的兼容性*/height:18px\0;width:104px\0;line-height:18px\0;margin-left:-45px\0;line-height:14px;display:inline-block;margin-right:10px;font-size:14px;border-radius: 0;outline:none;float:left;vertical-align: top;}
+.register-wrap .register .register-con ul li.read b{margin-left:-8px;margin-left:-50px\0;vertical-align: top\0;color:#999;float:left;}
+.register-wrap .register .register-con ul li.read a{text-decoration: none;float:right;margin-right:60px;}
+.register-wrap .register .register-con ul li.hwzc a{text-decoration: none;float:right;margin-right:60px;}
+.register-wrap .register .register-con ul li a{text-decoration: none;}
+.register-wrap .register .register-con ul li a{display:inline-block;color:#999;}
+.register-wrap .register .register-con ul li a.haiwai{float:left;}
+.register-wrap .register .register-con ul li "WebRoot/users/login.jsp"a.zhuce{float:right;margin-right:60px;}
+.register-wrap .register .register-con ul li.other{clear:both;color:#999;padding:20px 0;}
+.register-wrap .register .register-con ul li div{width:100px;height:36px;float:left;margin-right:6px;border:1px solid #ccc;cursor: pointer;}
+.register-wrap .register .register-con ul li div.qq{background:url("../images/qq.png");}
+.register-wrap .register .register-con ul li div.weixin{background:url("../images/weixin.png");}
+.register-wrap .register .register-con ul li div.weibo{background:url("../images/weibo.png");}
+
+
+

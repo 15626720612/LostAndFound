@@ -1,0 +1,58 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { padding:0; margin:0; }
+table { border-collapse:collapse; border-spacing:0 }
+fieldset {border:0 }
+img {border: 0; outline-width:0px;  vertical-align:top;  }
+address, caption, cite, code, dfn, em, th, var { font-weight:normal; font-style:normal }
+strong, b { font-weight: bold; }
+ol, ul { list-style:none }
+caption, th { text-align:left}
+h1, h2, h3, h4, h5 { padding: 0; margin: 0; }
+h1, h2 { font-family:microsoft yahei,Arial,"宋体";}
+h1 { font-size: 24px; }
+h2 { font-size: 30px; }
+h3 { font-size: 14px; }
+h4 { font-size: 12px; }
+h5 { font-size: 12px; }
+q:before, q:after { content:''}
+abbr, acronym { border:0 }
+hr { margin: 0; padding: 0; border: 0; color: #CDCDCD; background-color: #CCC; height: 1px; }
+blockquote { color:#333333; font-style: normal;}
+sup, sub { line-height:0}
+abbr, acronym { border-bottom:1px dotted #666}
+pre { white-space:pre;}
+pre, code, tt { font:12px 'andale mono', 'lucida console', monospace; line-height:1.5 }
+body, div, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, textarea, blockquote, th, td { font-family:microsoft yahei,"宋体",Arial, Helvetica; font-size: 12px; color: #333; line-height: 1.5 }
+p { padding: 0 0 10px 0; line-height: 1.5;}
+a { color:#333; text-decoration:none;}
+a:hover { color:#FF6561; text-decoration:none;}
+.fl { float: left;}
+.fr { float: right;}
+.clr{ display: block;overflow: hidden;clear: both;height:0;line-height:0;font-size: 0;}
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix { display: inline-table;}
+*html .clearfix { height: 1%;}
+.clearfix { display: block;}
+* + html .clearfix { min-height: 1%;}
+
+.c150{width:1150px;margin: 0 auto;}
+.c100{width:1000px;margin: 0 auto;}
+.p53{padding:53px 0;}
+.p8{padding-top: 8px;}
+.p7{padding-left:7px;}
+.p23{padding-top: 23px;}
+.p15{margin-top: 15px;}
+.pb23{padding: 17px 24px;}
+.p20{padding: 20px 0;}
+.b20{padding-bottom: 20px;}
+.w664{width: 664px;}
+.w323{width: 323px;}
+.m12{margin-top: 12px; padding: 0;}
+.wrap_white{background: #FFFFFF;}
+input{
+    outline: none;
+}
+
+
+
+
+

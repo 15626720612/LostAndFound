@@ -1,0 +1,114 @@
+#content{
+	width:910px;
+	min-height:600px;
+	margin:30px auto 0 auto;
+	-moz-border-radius:12px;
+	-khtml-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius:12px;
+}
+
+#wizard {
+	border: 5px solid #789;
+	font-size: 15px;
+	margin: 20px auto;
+	width: 660px;
+	height:500px;
+	background:#fff;
+	overflow: hidden;
+	position: relative;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#wizard .items{
+	width: 20000px;
+	clear: both;
+	position: absolute;
+}
+#wizard .right{
+	float: right;
+}
+/* 标题位置 */
+#wizard #status{
+	height: 35px;
+	background: #226ebb;
+	padding-left: 25px;
+}
+#status li{
+	float: left;
+	color: #fff;
+	padding: 8px 35px;
+}
+#status li.active{
+	background: #0c4f92;
+	font-weight: normal;
+}
+
+.page{
+	padding: 20px 30px;
+	width: 500px;
+	float: left;
+}
+.btn_nav{
+	height: 36px;
+	line-height: 36px;
+	margin: 20px auto;
+}
+.prev,.next{
+	width: 100px;
+	height: 32px;
+	line-height: 32px;
+	border: 1px solid #d3d3d3;
+	cursor: pointer;
+}
+#register_body img{
+	width: 50px;
+	height: 50px;
+	
+}
+#register_body input{
+	width: 300px;
+	height: 35px;
+	margin: 10px 20px;
+	font-size: 15px;
+}
+.register_head{
+	border: 5px solid #4ea1f5;
+	font-size: 12px;
+	height: 400px;
+	margin: 20px auto;
+	width: 350px;
+	overflow: hidden;
+	-webkit-border-radius:5px;
+}
+.register_head #status{
+	height: 35px;
+	background: #5491ab;
+	padding-left: 25px;
+}
+#status li{
+	float:left;
+	color:#fff;
+	padding-top:0px;
+	font-size:20px;
+}
+#status li .active{
+	background-color: #369;
+	font-weight: normal;
+}
+#status li img{
+	width: 60px;
+	height: 25px;
+	padding-top:3px;
+}
+.page{
+	width: 600px;
+	float: left;
+}
+#register_body{
+	display: flex;
+}
+#register_body span{
+	left: 20px;
+}
+

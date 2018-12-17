@@ -1,0 +1,37 @@
+use web;
+
+CREATE  TABLE `tb_user` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR(45) NULL ,
+  `pwd` VARCHAR(45) NULL ,
+  `gender` VARCHAR(2) NULL ,
+  `province` VARCHAR(4) NULL ,
+  `hobbies` VARCHAR(20) NULL ,
+  `modi_date` DATETIME NULL ,
+  `modi_user` BIGINT NULL COMMENT 'tb_user表的主键，记录谁修改了数据。' ,
+  `create_date` DATETIME NULL ,
+  PRIMARY KEY (`id`) );
+INSERT INTO `tb_user` (`id`,`name`,`pwd`,`gender`,`province`,`hobbies`,`modi_date`,`modi_user`,`create_date`) VALUES (1,'hello','123456',NULL,NULL,'0','2017-04-20 15:08:58',NULL,NULL);
+
+CREATE  TABLE `tb_goods` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR(45) NULL ,
+  `price` DECIMAL(10,2) NULL ,
+  `modi_user` BIGINT NULL ,
+  `modi_date` DATETIME NULL ,
+  PRIMARY KEY (`id`) )
+COMMENT = '商品定义表';
+INSERT INTO `tb_goods` (`id`, `name`, `price`) VALUES ('1', 'java', '20');
+INSERT INTO `tb_goods` (`id`, `name`, `price`) VALUES ('2', 'c', '15');
+INSERT INTO `tb_goods` (`id`, `name`, `price`) VALUES ('3', 'android', '25');
+
+CREATE  TABLE `tb_sys_menu` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT ,
+  `pid` BIGINT NULL DEFAULT -1 COMMENT '父节点id' ,
+  `text` VARCHAR(45) NULL COMMENT '菜单名称' ,
+  `url` VARCHAR(256) NULL COMMENT '菜单对应的功能页面' ,
+  PRIMARY KEY (`id`) )
+COMMENT = '系统菜单表';
+INSERT INTO `tb_sys_menu` (`id`,`pid`,`text`,`url`) VALUES (1,-1,'菜单管理','http://localhost:8080/shop/menu/menuList.jsp');
+
+

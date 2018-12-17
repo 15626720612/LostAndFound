@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 配置Struts2的常量 -->
+	<!-- 为了让.action后缀被Struts2拦截，需要修改默认的后缀拦截，增强对.action后缀的拦截 -->
+	<!-- <constant name="struts.action.extension" value="action"/> -->
+
+	<!-- 配置Action -->
+	<package name="indexssh" extends="struts-default" namespace="/">
+		<action name="index_*" class="com.aib.web.action.IndexAction"
+			method="{1}"> 
+			<result name="homeUI" type="chain">goods_findAllGoods</result>
+			<result name="loginUI">/users/login.jsp</result>
+			<result name="registerUI">/users/register.jsp</result>
+			<result name="myselfUI">/myself.jsp</result>
+			<result name="exitUI">/index.jsp</result>
+			<result name="aboutUI">/about.jsp</result>
+			<result name="insertUI">/insert.jsp</result>
+		</action>
+		<action name="login_*" class="loginAction" method="{1}">
+			<result name="login">/myself.jsp</result>
+			<result name="loginfailure">/failure/loginfailure.jsp</result>
+		</action>
+		<action name="register_*" class="registerAction" method="{1}">
+			<result name="register">/users/login.jsp</result>
+			<result name="registerfailure">/failure/registerfailure.jsp</result>
+		</action>
+
+		<action name="goods_*" class="goodsAction" method="{1}">
+			<result name="findAllGoods" >/index.jsp</result>
+			<result name="findtypeGoods">/index.jsp</result>
+			<result name="findCategory">/index.jsp</result>
+		</action>
+
+		<action name="myself_*" class="myselfAction" method="{1}">
+			<result name="changeDataUI">/myinfo.jsp</result>
+			<result name="changePasswordUI">/pwd.jsp</result>
+		</action>
+
+		<action name="changePwd_*" class="changePwdAction" method="{1}">
+			<result name="changePwd">/myself.jsp</result>
+		</action>
+
+		<action name="changeInfo_*" class="changeInfoAction" method="{1}">
+			<result name="changeInfo">/myself.jsp</result>
+		</action>
+
+		<action name="insert_*" class="insertAction" method="{1}">
+			<result name="insert" type="redirect">goods_findAllGoods</result>
+		</action>
+		
+		<action name="showGoods" class="com.aib.web.action.ShowGoodsAction" method="showGoods">
+			<result name="show">/goods.jsp</result>
+		</action>
+		
+		
+		<action name="uploads" class="com.aib.web.action.UploadAction">
+			
+			<!-- 指定（限制）上传文件的类型，定义局部拦截器，修改默认拦截器的属性 "fileUpload.maximumSize" ：限制上传最大的文件大小。 "fileUpload.allowedTypes"：允许上传文件的类型。 "fileUpload.allowedExtensions"：允许上传文件的可扩展文件类型。 -->
+			
+			
+			
+			<interceptor-ref name="defaultStack">
+			
+				<param name="fileUpload.maximumSize">500000000</param>
+				
+				<param name="fileUpload.allowedTypes">image/jpeg,image/png,image/gif</param>
+				
+				<param name="fileUpload.allowedExtensions">.jpg,.jpeg,.png</param>
+			
+			</interceptor-ref>
+			
+			<result name="success" type="chain">insert_insert</result>
+			<result name="input" type="chain">insert_insert</result>
+			<!-- <result name="success" type="chain">goods_findAllGoods</result>
+			<result name="SUCCESS" type="chain">goods_findAllGoods</result>
+			<result name="input" type="chain">goods_findAllGoods</result> -->
+		
+		</action>
+		
+	</package>
+</struts>
